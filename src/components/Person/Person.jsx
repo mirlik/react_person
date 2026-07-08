@@ -8,12 +8,15 @@ export const Person = ({ person }) => {
   const ageText = person.age
     ? `I am ${person.age}`
     : '';
-  const shouldShowAge = Boolean(ageText);
+  const shouldShowAge = Boolean(ageText)
+
 
   return (
     <div className="Person">
       <h2 className="Person__name">My name is {person.name}</h2>
-      {shouldShowAge && <p className="Person__age">{ageText}</p>}
+      {shouldShowAge && (
+        <p className="Person__age">{ageText}</p>
+      )}
       <p className="Person__partner">{partnerText}</p>
     </div>
   );
