@@ -1,9 +1,13 @@
 export const Person = ({ person }) => {
-  const partnerSex = person.sex === 'm' ? 'wife' : 'husband';
+  const partnerSex = person.sex === 'm'
+    ? 'wife'
+    : 'husband';
   const partnerText = person.isMarried
     ? `${person.partnerName} is my ${partnerSex}`
     : 'I am not married';
-  const ageText = person.age ? `I am ${person.age}` : '';
+  const ageText = person.age
+    ? `I am ${person.age}`
+    : '';
   const shouldShowAge = Boolean(ageText);
 
   return (
